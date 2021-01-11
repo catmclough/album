@@ -1,13 +1,27 @@
 $min-photo-width: 15;
 $max-photo-width-above-min: 30;
-$random-width: percentage(random($min-photo-width) / 100);
 
 .photo-container {
   max-width: 50%;
   max-height: 50%;
-  width: $random-width + $max-photo-width-above-min;
 }
 
 .photo {
   width: 100%;
+}
+
+$photos: 4;
+$rotation: random(3);
+
+@for $i from 0 through $photos {
+  .photo-container:nth-child(#{$i + 1}) {
+    transform: rotate($rotation + deg);
+    width: percentage(random($min-photo-width) / 100) + $max-photo-width-above-min;
+  }
+  @if $i % 2 == 0 {
+    $rotation: $rotation * -1;
+  }
+  @else {
+    $rotation: random(3);
+  }
 }
