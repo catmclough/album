@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './components/Header';
+import Japan from './components/Japan';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Japan />
     </div>
   );
 }
