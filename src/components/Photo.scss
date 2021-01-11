@@ -1,9 +1,10 @@
-$min-photo-width: 15;
+$min-photo-width: 5;
 $max-photo-width-above-min: 30;
 
 .photo-container {
   max-width: 50%;
   max-height: 50%;
+  min-width: 33%;
 }
 
 .photo {
