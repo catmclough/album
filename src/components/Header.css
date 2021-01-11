@@ -1,0 +1,7 @@
+.app-header {
+  min-height: 100vh;
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+}
